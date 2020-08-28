@@ -32,11 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
     square.innerHTML = clickLetter
 
     if (firstGuess.length === 0) {
-      firstGuess = [{cardLetter : clickLetter}, {id : clickId}]
-      console.log(firstGuess)
+      firstGuess = {
+        cardLetter : clickLetter,
+        id : clickId,
+        squareSave : square
+      }
     } else {
-      secondGuess = [{cardLetter : clickLetter}, {id : clickId}]
-      console.log(secondGuess)
+      secondGuess = {
+        cardLetter : clickLetter, 
+        id : clickId
+      }
+      if (firstGuess.cardLetter === secondGuess.cardLetter) {
+        score ++
+        console.log(score)
+        firstGuess = []
+        secondGuess = []
+      } else {
+        square.innerHTML = ''
+        firstGuess.squareSave.innerHTML = ''
+        firstGuess = []
+        secondGuess = []
+      }
     }
   }
 
