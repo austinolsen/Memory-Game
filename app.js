@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           firstGuess = []
           secondGuess = []
-        } else {
+        } else if(firstGuess.id !== secondGuess.id) {
           isClear = 'false'
           clearButton.setAttribute('id', 'show')
           misses ++
