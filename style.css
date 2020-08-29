@@ -1,9 +1,19 @@
+
+body {
+  background-color: cadetblue;
+}
+
+header {
+  text-align: center;
+  font-size: 100px;
+}
 .grid {
   height: 400px;
   width: 400px;
   display: flex;
   flex-wrap: wrap;
   background-color: grey;
+  margin: auto;
 }
 
 .grid div {
@@ -11,12 +21,33 @@
   width: 96px;
   border: 2px solid black;
   text-align: center;
-  font-size: large;
+  font-size: 85px;
 }
 
-.clear {
+.score, .misses {
+  font-size: 50px;
+  text-align: center;
+}
+
+.clear#hide {
   background-color: crimson;
   height: 50px;
   width: 140px;
   text-align: center;
+  margin: auto;
+  font-size: 25px;
+  margin-top: 8px;
+  line-height: 50px;
+  display: none;
+}
+
+.clear#show {
+  background-color: crimson;
+  height: 50px;
+  width: 140px;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
+  margin-top: 8px;
+  line-height: 50px;
 }

@@ -58,10 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstGuess.cardLetter === secondGuess.cardLetter && firstGuess.id !== secondGuess.id) {
           score ++
           scoreBoard.innerHTML = `Score: ${score}`
+          if (score === 8) {
+            alert(`Game complete. You had ${misses} misses.`)
+          }
           firstGuess = []
           secondGuess = []
         } else {
           isClear = 'false'
+          clearButton.setAttribute('id', 'show')
           misses ++
           missBoard.innerHTML = `Misses: ${misses}`
         }
@@ -78,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       firstGuess.squareSave.innerHTML = ''
       firstGuess = []
       secondGuess = []
+      clearButton.setAttribute('id', 'hide')
     }
   }
   
