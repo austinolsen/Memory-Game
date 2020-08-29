@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
+  const clearButton = document.querySelector('.clear')
+  const scoreBoard = document.querySelector('.score')
+  console.log(clearButton)
+  console.log(scoreBoard)
+
   let width = 4
   let squares = []
 
@@ -40,15 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       secondGuess = {
         cardLetter : clickLetter, 
-        id : clickId
+        id : clickId,
+        squareSave : square
       }
       if (firstGuess.cardLetter === secondGuess.cardLetter) {
         score ++
         console.log(score)
+        scoreBoard.innerHTML = `Score: ${score}`
         firstGuess = []
         secondGuess = []
       } else {
-        square.innerHTML = ''
+        secondGuess.squareSave.innerHTML = ''
         firstGuess.squareSave.innerHTML = ''
         firstGuess = []
         secondGuess = []

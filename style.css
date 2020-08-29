@@ -7,7 +7,16 @@
 }
 
 .grid div {
-  height: 100px;
-  width: 100px;
+  height: 96px;
+  width: 96px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: large;
+}
+
+.clear {
+  background-color: crimson;
+  height: 50px;
+  width: 140px;
   text-align: center;
 }
