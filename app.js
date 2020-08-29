@@ -2,12 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   const clearButton = document.querySelector('.clear')
   const scoreBoard = document.querySelector('.score')
-  console.log(clearButton)
-  console.log(scoreBoard)
+  clearButton.setAttribute('isClear', true)
 
+  clearButton.addEventListener('click', function(e) {
+    clickClear(clearButton)
+  })
+
+  
   let width = 4
   let squares = []
-
+  
   //create board
   function createBoard() {
     const cardsArray = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"]
@@ -18,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       square.setAttribute( 'cardLetter', shuffledArray[i])
       grid.appendChild(square)
       squares.push(square)
-
+      
       //click square
       square.addEventListener('click', function(e) {
         click(square)
@@ -26,16 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   createBoard()
-
+  
   let firstGuess = []
   let secondGuess = []
   let score = 0
-
+  
   function click(square) {
     let clickLetter = square.getAttribute('cardLetter')
     let clickId = square.getAttribute('id')
     square.innerHTML = clickLetter
-
+    
     if (firstGuess.length === 0) {
       firstGuess = {
         cardLetter : clickLetter,
@@ -59,9 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
         firstGuess.squareSave.innerHTML = ''
         firstGuess = []
         secondGuess = []
+        clearButton.setAttribute('isClear', false)
+        console.log(clearButton)
       }
     }
   }
-
-
+  
+  function clickClear(clearButton) {
+    clearButton.setAttribute('isClear', true)
+    console.log(clearButton.getAttribute('isClear'))
+  }
+  
 })
