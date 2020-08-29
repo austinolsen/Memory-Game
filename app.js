@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearButton = document.querySelector('.clear')
   const scoreBoard = document.querySelector('.score')
   const missBoard = document.querySelector('.misses')
+  const message = document.querySelector('.message')
 
   clearButton.addEventListener('click', function(e) {
     clickClear(clearButton)
@@ -59,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
           score ++
           scoreBoard.innerHTML = `Score: ${score}`
           if (score === 8) {
-            alert(`Game complete. You had ${misses} misses.`)
+            message.innerHTML = `Game complete. You had ${misses} misses.`;
+            message.setAttribute('id', 'show')
           }
           firstGuess = []
           secondGuess = []
@@ -70,8 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
           missBoard.innerHTML = `Misses: ${misses}`
         }
       }
-    } else {
-      alert('Clear Wrong Guess')
     }
   }
   

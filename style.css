@@ -1,53 +1,84 @@
 
 body {
   background-color: cadetblue;
+  font-family: 'Roboto Slab',Helvetica,Arial,sans-serif;
 }
 
 header {
   text-align: center;
   font-size: 100px;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.flex-container {
+  display: flex;
+  width: 430px;
+  margin: auto;
+  text-align: center;
+  justify-content: space-between;
 }
 .grid {
-  height: 400px;
-  width: 400px;
+  height: 440px;
+  width: 440px;
   display: flex;
   flex-wrap: wrap;
-  background-color: grey;
   margin: auto;
 }
 
 .grid div {
+  background-color: crimson;
+  color: white;
   height: 96px;
   width: 96px;
   border: 2px solid black;
+  margin: 5px;
   text-align: center;
   font-size: 85px;
 }
 
-.score, .misses {
-  font-size: 50px;
-  text-align: center;
-}
 
-.clear#hide {
-  background-color: crimson;
-  height: 50px;
-  width: 140px;
-  text-align: center;
-  margin: auto;
-  font-size: 25px;
-  margin-top: 8px;
-  line-height: 50px;
+#hide {
   display: none;
 }
 
 .clear#show {
   background-color: crimson;
-  height: 50px;
-  width: 140px;
+  color: white;
+  height: 65px;
+  width: 120px;
+  border: 2px solid black;
   text-align: center;
   margin: auto;
-  font-size: 25px;
+  font-size: 23px;
   margin-top: 8px;
-  line-height: 50px;
+  line-height: 31px;
+}
+
+.restart {
+  background-color: crimson;
+  height: 65px;
+  width: 120px;
+  border: 2px solid black;
+  text-align: center;
+  margin: auto;
+  font-size: 23px;
+  margin-top: 8px;
+  line-height: 33px;
+}
+
+.message {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
 }

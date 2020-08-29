@@ -9,9 +9,15 @@
 </head>
 <body>
   <header>Match Game</header>
-  <div class="score">Score:</div>
-  <div class="misses">Misses:</div>
+  <div class="flex-container">
+    <div class="score">Score: 0</div>
+    <div class="misses">Misses: 0</div>
+  </div>
   <div class="grid"></div>
+  <div class="message" id="hide"></div>
   <div class="clear" id="hide">Clear Guess</div>
+  <footer>
+    <div class="restart" onClick="window.location.reload();">Restart Game</div>
+  </footer>
 </body>
 </html>
