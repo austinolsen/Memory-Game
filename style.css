@@ -6,7 +6,8 @@ body {
 
 header {
   text-align: center;
-  font-size: 100px;
+  font-family: 'Teko', sans-serif;
+  font-size: 150px;
   margin-bottom: 70px;
   margin-top: 70px;
 }
@@ -53,31 +54,34 @@ footer {
 }
 
 .clear#show {
+  font-family: 'Teko', sans-serif;
   background-color: crimson;
   color: white;
-  height: 65px;
+  height: 50px;
   width: 120px;
   border: 2px solid black;
   text-align: center;
   margin: auto;
   font-size: 23px;
   margin-top: 8px;
-  line-height: 31px;
+  line-height: 50px;
 }
 
 .restart {
+  font-family: 'Teko', sans-serif;
   background-color: crimson;
-  height: 65px;
+  height: 50px;
   width: 120px;
   border: 2px solid black;
   text-align: center;
   margin: auto;
   font-size: 23px;
   margin-top: 8px;
-  line-height: 33px;
+  line-height: 50px;
 }
 
 .message {
+  font-family: 'Teko', sans-serif;
   font-size: 40px;
   text-align: center;
   margin-top: 10px;
