@@ -1,6 +1,10 @@
 
 body {
-  background-color: cadetblue;
+  background-image: url(background.jpg);
+  background-color: teal;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   font-family: 'Roboto Slab',Helvetica,Arial,sans-serif;
 }
 
@@ -19,7 +23,7 @@ footer {
   width: 100%;
   color: white;
   text-align: center;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 }
 
 .flex-container {
