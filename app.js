@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scoreBoard = document.querySelector('.score')
   const missBoard = document.querySelector('.misses')
   const message = document.querySelector('.message')
+  const restart = document.querySelector('.restart')
 
   clearButton.addEventListener('click', function(e) {
     clickClear(clearButton)
@@ -62,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (score === 8) {
             message.innerHTML = `Game complete. You had ${misses} misses.`;
             message.setAttribute('id', 'show')
+            restart.setAttribute('id', 'show')
+            
           }
           firstGuess = []
           secondGuess = []

@@ -12,8 +12,7 @@ header {
   text-align: center;
   font-family: 'Teko', sans-serif;
   font-size: 150px;
-  margin-bottom: 70px;
-  margin-top: 70px;
+  line-height: 130px;
 }
 
 footer {
@@ -23,7 +22,7 @@ footer {
   width: 100%;
   color: white;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .flex-container {
@@ -52,7 +51,6 @@ footer {
   font-size: 85px;
 }
 
-
 #hide {
   display: none;
 }
@@ -71,7 +69,7 @@ footer {
   line-height: 50px;
 }
 
-.restart {
+.restart#show {
   font-family: 'Teko', sans-serif;
   background-color: crimson;
   height: 50px;
